@@ -46,6 +46,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '177370535188',
     projectId: 'prova-sub-mobile',
     authDomain: 'prova-sub-mobile.firebaseapp.com',
+    databaseURL: 'https://prova-sub-mobile-default-rtdb.firebaseio.com/',
     storageBucket: 'prova-sub-mobile.firebasestorage.app',
     measurementId: 'G-WW0D10L4HK',
   );
