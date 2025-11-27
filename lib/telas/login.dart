@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:prova_sub_mobile/database/classes/login_controller.dart';
-import 'package:prova_sub_mobile/temas/tema_padrao.dart';
 
 final formKey = GlobalKey<FormState>();
 final loginController = TextEditingController();
@@ -42,7 +41,7 @@ class _TelaLoginState extends State<TelaLogin> {
                   loginController.text,
                   senhaController.text,
                 )) {
-                  Navigator.pushNamed(context, '/cadastro');
+                  Navigator.pushNamed(context, '/principal');
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
@@ -79,14 +78,6 @@ class _TelaLoginState extends State<TelaLogin> {
               },
               icon: const Icon(Icons.person_add_alt_1_outlined),
               label: const Text('Cadastrar'),
-            ),
-            TextButton.icon(
-              onPressed: () => Navigator.pop(context),
-              icon: const Icon(
-                Icons.exit_to_app,
-                color: Colors.redAccent,
-              ),
-              label: const Text('Sair'),
             ),
           ],
         ),

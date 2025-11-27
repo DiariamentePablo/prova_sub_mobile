@@ -1,11 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:prova_sub_mobile/telas/cadastro.dart';
+import 'package:prova_sub_mobile/telas/inicio.dart';
 import 'firebase_options.dart';
 import 'package:prova_sub_mobile/temas/tema_padrao.dart';
 import 'package:prova_sub_mobile/telas/login.dart';
-import 'package:prova_sub_mobile/telas/cadastro.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +25,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/cadastro': (context) => AdicionarItemPage(),
+        '/principal': (context) => TelaInicial(),
       },
       home: TelaLogin(),
     );
