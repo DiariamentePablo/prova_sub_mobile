@@ -14,10 +14,18 @@ class TelaInicial extends StatelessWidget {
             TextButton.icon(
               onPressed: () => Navigator.pushNamed(context, '/cadastro'),
               icon: const Icon(
-                Icons.description,
+                Icons.article,
                 color: Colors.redAccent,
               ),
               label: const Text('Cadastro de itens'),
+            ),
+            TextButton.icon(
+              onPressed: () => Navigator.pushNamed(context, '/listagem'),
+              icon: const Icon(
+                Icons.list,
+                color: Colors.redAccent,
+              ),
+              label: const Text('Lista de itens'),
             ),
             TextButton.icon(
               onPressed: () => {
@@ -25,7 +33,7 @@ class TelaInicial extends StatelessWidget {
                 FirebaseAuth.instance.signOut()
               },
               icon: const Icon(
-                Icons.exit_to_app,
+                Icons.logout,
                 color: Colors.redAccent,
               ),
               label: const Text('Sair'),

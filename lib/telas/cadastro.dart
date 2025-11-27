@@ -17,22 +17,24 @@ class _AdicionarItemPageState extends State<AdicionarItemPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Registro de itens"),
+      ),
       body: Center(
         child: Column(
           children: [
-            Text('Informe o nome do seu objeto e sua descrição'),
             TextFormField(
               controller: nomeController,
               decoration: const InputDecoration(
                 labelText: 'Nome',
-                prefixIcon: Icon(Icons.person_outline),
+                prefixIcon: Icon(Icons.assignment_ind),
               ),
             ),
             TextFormField(
               controller: descricaoController,
               decoration: const InputDecoration(
                 labelText: 'Descrição',
-                prefixIcon: Icon(Icons.lock_outline),
+                prefixIcon: Icon(Icons.info),
               ),
             ),
             OutlinedButton.icon(
@@ -59,7 +61,7 @@ class _AdicionarItemPageState extends State<AdicionarItemPage> {
                   );
                 }
               },
-              icon: const Icon(Icons.person_add_alt_1_outlined),
+              icon: const Icon(Icons.check_circle),
               label: const Text('Salvar'),
             ),
           ],

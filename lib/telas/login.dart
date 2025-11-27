@@ -70,7 +70,7 @@ class _TelaLoginState extends State<TelaLogin> {
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('$result'),
+                      content: Text(result),
                     ),
                   );
                 }
