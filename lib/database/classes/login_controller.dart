@@ -13,15 +13,13 @@ class Logincontroller {
     }
   }
 
-  Future<bool> registrar(String usuario, String senha) async {
+  Future<String> registrar(String usuario, String senha) async {
     LoginDao loginDao = CredenciaisUsuario();
     try {
       await loginDao.registrar(Login(usuario: usuario, senha: senha));
-      print('Registro bem-sucedido');
-      return true;
+      return "true";
     } catch (e) {
-      print('Erro no registro: $e');
-      return false;
+      return "Houve um erro no registro: $e";
     }
   }
 

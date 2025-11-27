@@ -57,10 +57,11 @@ class _TelaLoginState extends State<TelaLogin> {
             ),
             OutlinedButton.icon(
               onPressed: () async {
-                if (await Logincontroller().registrar(
+                String result = await Logincontroller().registrar(
                   loginController.text,
                   senhaController.text,
-                )) {
+                );
+                if (result == "true") {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text('Usuário cadastrado com sucesso!'),
@@ -68,10 +69,8 @@ class _TelaLoginState extends State<TelaLogin> {
                   );
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text(
-                        'Falha no cadastro. Tente novamente.',
-                      ),
+                    SnackBar(
+                      content: Text('$result'),
                     ),
                   );
                 }
