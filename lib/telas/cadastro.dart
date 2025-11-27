@@ -11,10 +11,13 @@ class AdicionarItemPage extends StatefulWidget {
 class _AdicionarItemPageState extends State<AdicionarItemPage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: AppTema.temaClaro,
-      home: Center(
-        child: Text("Tela de Cadastro"),
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: [
+            Text("Tela de Cadastro")
+          ],
+        )
       ),
     );
   }
